@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About DJ Kevin - Professional Club DJ, Music Producer, and Founder of Mix With DJ Kevin and Musik N Beatz Academy.">
+  <title>About DJ Kevin | The Ultimate DJ Resource</title>
+
+  <!-- RemixIcon for Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">
+          <i class="ri-disc-line"></i>
+        </div>
+        <div>
+          <span>MIX WITH <span class="gold-gradient-text">DJ KEVIN</span></span>
+          <span class="brand-tagline">THE ULTIMATE DJ RESOURCE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="store.html" class="nav-link">DJ Playlist Shop</a>
+        <a href="academy.html" class="nav-link">Musik N Beatz Academy</a>
+        <a href="downloads.html" class="nav-link">Free Downloads</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Mobile Menu">
+          <i class="ri-menu-3-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER NAV -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-logo-icon"><i class="ri-disc-line"></i></div>
+          <span class="gold-gradient-text">DJ KEVIN</span>
+        </a>
+        <button id="drawerClose" style="color: #FFF; font-size: 1.5rem;">&times;</button>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="store.html" class="nav-link">DJ Playlist Shop</a>
+        <a href="academy.html" class="nav-link">Musik N Beatz Academy</a>
+        <a href="downloads.html" class="nav-link">Free Downloads</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ABOUT HERO & BIOGRAPHY -->
+  <section style="padding-top: 8rem; padding-bottom: 4rem; background: radial-gradient(circle at 50% 0%, rgba(229,193,88,0.15) 0%, rgba(6,6,8,1) 85%);">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge-gold"><i class="ri-user-star-line"></i> Meet The Mastermind</span>
+        <h1 class="hero-title">ABOUT <span class="gold-gradient-text">DJ KEVIN</span></h1>
+        <p class="hero-desc" style="margin-bottom: 1.5rem;">
+          With over 10+ years of active nightclub residencies, festival headlining slots, and high-end wedding gigs, DJ Kevin is recognized as one of the most technical and versatile DJs in the region.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+          Frustrated by the low quality, unorganized, and clipped audio packs floating around online, Kevin created <strong>Mix With DJ Kevin</strong> — a dedicated ecosystem providing DJs with clean, gain-normalized, Rekordbox & Serato pre-cued music collections and hands-on academy training.
+        </p>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="store.html" class="btn btn-gold">Explore Playlist Packs</a>
+          <a href="contact.html" class="btn btn-outline-gold">Book For Gigs</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-gold); box-shadow: var(--shadow-gold);">
+          <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" alt="DJ Kevin In Studio" referrerPolicy="no-referrer" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="section-padding" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-compass-3-line"></i></div>
+          <h3>Our Mission</h3>
+          <p>To eliminate wasted prep hours for working DJs by supplying instant, plug-and-play music packs pre-tagged with accurate BPMs, Camelot keys, and 8-bar hot cue points.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-eye-line"></i></div>
+          <h3>Our Vision</h3>
+          <p>To empower 100,000+ DJs worldwide through elite track curation and hands-on academy education, setting a new gold standard for club and wedding DJ performances.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-shield-star-line"></i></div>
+          <h3>Brand Story</h3>
+          <p>Started in a home studio with a single Pioneer DDJ controller, Mix With DJ Kevin has grown into an international platform trusted by thousands of touring, club, and mobile DJs.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO SETUP & GEAR -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="badge-gold">Rig & Ecosystem</span>
+        <h2 class="section-title">THE STUDIO <span class="gold-gradient-text">SETUP</span></h2>
+        <p class="section-subtitle">
+          Every track in our store is prepared and tested on industry-standard flagship hardware.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-disc-line"></i></div>
+          <h3>Pioneer CDJ-3000s</h3>
+          <p>Flagship multi-players driving precise beat grid analysis and instant touch preview cues.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-sliders-line"></i></div>
+          <h3>Pioneer DJM-A9 Mixer</h3>
+          <p>Next-generation 32-bit audio converters ensuring warm, distortion-free sound output.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-computer-line"></i></div>
+          <h3>Rekordbox & Serato DJ Pro</h3>
+          <p>Dual ecosystem compatibility with XML export tags for zero-delay Rekordbox/Serato loading.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-speaker-3-line"></i></div>
+          <h3>Yamaha HS8 Studio Monitors</h3>
+          <p>High-fidelity linear monitoring to verify pristine bass frequency isolation and gain levels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSISTENT AUDIO PLAYER BAR -->
+  <div class="audio-player-bar" id="audioPlayerBar">
+    <div class="audio-player-inner">
+      <div class="track-info">
+        <img src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?auto=format&fit=crop&w=200&q=80" id="playerTrackImage" class="track-thumb" alt="Track Artwork" referrerPolicy="no-referrer" />
+        <div class="track-details">
+          <h4 id="playerTrackTitle">Select a Track to Preview</h4>
+          <p>Mix With DJ Kevin Sampler</p>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <button class="play-btn" id="playerPlayBtn"><i class="ri-play-fill"></i></button>
+        <div class="progress-container">
+          <span class="time-display" id="playerCurrentTime">0:00</span>
+          <div class="progress-bar" id="playerProgress">
+            <div class="progress-fill" id="playerFill"></div>
+          </div>
+          <span class="time-display" id="playerDuration">0:00</span>
+        </div>
+      </div>
+
+      <button class="close-player" id="playerCloseBtn">&times;</button>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919082535931?text=Hi%20DJ%20Kevin,%20I%20read%20your%20about%20page" target="_blank" class="floating-whatsapp" aria-label="Contact on WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-logo-icon"><i class="ri-disc-line"></i></div>
+            <span class="gold-gradient-text">DJ KEVIN</span>
+          </a>
+          <p>The Ultimate DJ Resource. Founded by DJ Kevin.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/mixwithdjkevin" target="_blank" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://youtube.com/mixwithdjkevin" target="_blank" class="social-icon" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+            <a href="https://wa.me/919082535931" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="store.html">DJ Playlist Shop</a>
+            <a href="academy.html">Musik N Beatz Academy</a>
+            <a href="downloads.html">Free Downloads</a>
+            <a href="about.html">About DJ Kevin</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Packs</h4>
+          <div class="footer-links">
+            <a href="store.html">Mega Bundles</a>
+            <a href="store.html">Wedding Collection</a>
+            <a href="store.html">Roadshow Collection</a>
+          </div>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Stay Connected</h4>
+          <p>Join DJ Kevin's official VIP list.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); DJApp.showToast('Subscribed to VIP List!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-gold btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mix With DJ Kevin. All Rights Reserved. GitHub Pages Compatible.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

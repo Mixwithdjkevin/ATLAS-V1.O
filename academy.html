@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Musik N Beatz Academy by DJ Kevin. Online & In-Studio Hands-On Professional DJ Training Courses on Pioneer CDJ-3000 & Rekordbox.">
+  <title>Musik N Beatz Academy | Mix With DJ Kevin</title>
+
+  <!-- RemixIcon for Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">
+          <i class="ri-disc-line"></i>
+        </div>
+        <div>
+          <span>MIX WITH <span class="gold-gradient-text">DJ KEVIN</span></span>
+          <span class="brand-tagline">THE ULTIMATE DJ RESOURCE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="store.html" class="nav-link">DJ Playlist Shop</a>
+        <a href="academy.html" class="nav-link active">Musik N Beatz Academy</a>
+        <a href="downloads.html" class="nav-link">Free Downloads</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Mobile Menu">
+          <i class="ri-menu-3-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER NAV -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-logo-icon"><i class="ri-disc-line"></i></div>
+          <span class="gold-gradient-text">DJ KEVIN</span>
+        </a>
+        <button id="drawerClose" style="color: #FFF; font-size: 1.5rem;">&times;</button>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="store.html" class="nav-link">DJ Playlist Shop</a>
+        <a href="academy.html" class="nav-link active">Musik N Beatz Academy</a>
+        <a href="downloads.html" class="nav-link">Free Downloads</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ACADEMY HERO -->
+  <section style="padding-top: 8rem; padding-bottom: 4rem; background: radial-gradient(circle at 50% 0%, rgba(229,193,88,0.15) 0%, rgba(6,6,8,1) 85%); text-align: center;">
+    <div class="container">
+      <span class="badge-gold"><i class="ri-graduation-cap-fill"></i> Learn From Industry Veteran DJ Kevin</span>
+      <h1 class="section-title">MUSIK N BEATZ <span class="gold-gradient-text">ACADEMY</span></h1>
+      <p class="section-subtitle">
+        Master the art & science of modern DJing. From fundamental beatmatching to advanced scratching, toneplay, and securing high-paying club & wedding bookings.
+      </p>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section class="section-padding" style="padding-top: 1rem;">
+    <div class="container">
+      
+      <!-- Rendered dynamically by app.js -->
+      <div class="academy-grid" id="coursesGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- ACADEMY FEATURES / WHY STUDY HERE -->
+  <section class="section-padding" style="background: var(--bg-surface);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="badge-gold">Student Advantages</span>
+        <h2 class="section-title">WHY LEARN AT <span class="gold-gradient-text">MUSIK N BEATZ</span></h2>
+        <p class="section-subtitle">
+          We don't just teach software buttons — we train real performance DJs ready to command crowds.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-headphone-line"></i></div>
+          <h3>1-on-1 Personalized Mentorship</h3>
+          <p>Get direct feedback on every mix from DJ Kevin. We fix technical flaws in real-time before you perform on stage.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-radio-2-line"></i></div>
+          <h3>Flagship Pioneer Gear</h3>
+          <p>Practice on Industry standard Pioneer CDJ-3000 decks and DJM-A9 mixers, identical to major club booths.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-archive-line"></i></div>
+          <h3>Free Access To VIP Music Vault</h3>
+          <p>Every student receives full access to DJ Kevin's 2,500+ track Rekordbox hot cue library upon graduation.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="ri-briefcase-4-line"></i></div>
+          <h3>Gig & Placement Guidance</h3>
+          <p>Learn how to brand yourself, build promo videos, pitch club managers, and price your wedding DJ gigs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREQUENTLY ASKED QUESTIONS -->
+  <section class="section-padding">
+    <div class="container" style="max-width: 800px;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="badge-gold">FAQ</span>
+        <h2 class="section-title">ACADEMY <span class="gold-gradient-text">QUESTIONS</span></h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div class="feature-card" style="padding: 1.5rem;">
+          <h4 style="font-size: 1.15rem; color: #FFF; margin-bottom: 0.5rem;"><i class="ri-question-line gold-gradient-text"></i> Do I need prior musical experience to join?</h4>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">No prior musical background is required. We start from ground zero: understanding music bar structures, BPM counting, and equipment fundamentals.</p>
+        </div>
+
+        <div class="feature-card" style="padding: 1.5rem;">
+          <h4 style="font-size: 1.15rem; color: #FFF; margin-bottom: 0.5rem;"><i class="ri-question-line gold-gradient-text"></i> What is the difference between Online and Offline?</h4>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Online courses are live 1-on-1 video sessions + HD student portal suitable for worldwide students. Offline courses take place physically at DJ Kevin's Mumbai studio on CDJ-3000 setups.</p>
+        </div>
+
+        <div class="feature-card" style="padding: 1.5rem;">
+          <h4 style="font-size: 1.15rem; color: #FFF; margin-bottom: 0.5rem;"><i class="ri-question-line gold-gradient-text"></i> Do I get a completion certificate?</h4>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Yes! All graduates receive an official Musik N Beatz Certified Pro DJ Certificate along with a recorded 60-minute promo mix.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://wa.me/919082535931?text=Hi%20DJ%20Kevin,%20I%20have%20questions%20about%20Musik%20N%20Beatz%20Academy" target="_blank" class="btn btn-whatsapp">
+          <i class="ri-whatsapp-line" style="font-size: 1.3rem;"></i> Direct WhatsApp Admission Enquiry
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSISTENT AUDIO PLAYER BAR -->
+  <div class="audio-player-bar" id="audioPlayerBar">
+    <div class="audio-player-inner">
+      <div class="track-info">
+        <img src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?auto=format&fit=crop&w=200&q=80" id="playerTrackImage" class="track-thumb" alt="Track Artwork" referrerPolicy="no-referrer" />
+        <div class="track-details">
+          <h4 id="playerTrackTitle">Select a Track to Preview</h4>
+          <p>Mix With DJ Kevin Sampler</p>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <button class="play-btn" id="playerPlayBtn"><i class="ri-play-fill"></i></button>
+        <div class="progress-container">
+          <span class="time-display" id="playerCurrentTime">0:00</span>
+          <div class="progress-bar" id="playerProgress">
+            <div class="progress-fill" id="playerFill"></div>
+          </div>
+          <span class="time-display" id="playerDuration">0:00</span>
+        </div>
+      </div>
+
+      <button class="close-player" id="playerCloseBtn">&times;</button>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919082535931?text=Hi%20DJ%20Kevin,%20I'm%20interested%20in%20Musik%20N%20Beatz%20Academy" target="_blank" class="floating-whatsapp" aria-label="Contact on WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-logo-icon"><i class="ri-disc-line"></i></div>
+            <span class="gold-gradient-text">DJ KEVIN</span>
+          </a>
+          <p>Musik N Beatz Academy. Training the next generation of headline club and festival DJs.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/mixwithdjkevin" target="_blank" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://youtube.com/mixwithdjkevin" target="_blank" class="social-icon" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+            <a href="https://wa.me/919082535931" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="store.html">DJ Playlist Shop</a>
+            <a href="academy.html">Musik N Beatz Academy</a>
+            <a href="downloads.html">Free Downloads</a>
+            <a href="about.html">About DJ Kevin</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Academy</h4>
+          <div class="footer-links">
+            <a href="academy.html">Online DJ Course</a>
+            <a href="academy.html">Offline Studio Course</a>
+            <a href="https://wa.me/919082535931" target="_blank">Book Studio Visit</a>
+          </div>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Admission Alerts</h4>
+          <p>Be the first to know when new studio batches open.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); DJApp.showToast('Subscribed to Batch Alerts!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-gold btn-sm">Notify</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mix With DJ Kevin. All Rights Reserved. GitHub Pages Compatible.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free DJ Downloads by Mix With DJ Kevin. Download free Rekordbox hot cue packs, BPM cheat sheets, transition edits, and scratch samples.">
+  <title>Free DJ Downloads | Mix With DJ Kevin</title>
+
+  <!-- RemixIcon for Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER / NAVIGATION -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">
+          <i class="ri-disc-line"></i>
+        </div>
+        <div>
+          <span>MIX WITH <span class="gold-gradient-text">DJ KEVIN</span></span>
+          <span class="brand-tagline">THE ULTIMATE DJ RESOURCE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="store.html" class="nav-link">DJ Playlist Shop</a>
+        <a href="academy.html" class="nav-link">Musik N Beatz Academy</a>
+        <a href="downloads.html" class="nav-link active">Free Downloads</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Mobile Menu">
+          <i class="ri-menu-3-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER NAV -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-logo-icon"><i class="ri-disc-line"></i></div>
+          <span class="gold-gradient-text">DJ KEVIN</span>
+        </a>
+        <button id="drawerClose" style="color: #FFF; font-size: 1.5rem;">&times;</button>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="store.html" class="nav-link">DJ Playlist Shop</a>
+        <a href="academy.html" class="nav-link">Musik N Beatz Academy</a>
+        <a href="downloads.html" class="nav-link active">Free Downloads</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- DOWNLOADS HERO -->
+  <section style="padding-top: 8rem; padding-bottom: 3.5rem; background: radial-gradient(circle at 50% 0%, rgba(229,193,88,0.15) 0%, rgba(6,6,8,1) 80%); text-align: center;">
+    <div class="container">
+      <span class="badge-gold"><i class="ri-gift-line"></i> 100% Free DJ Toolkit</span>
+      <h1 class="section-title">FREE DJ <span class="gold-gradient-text">RESOURCES</span></h1>
+      <p class="section-subtitle">
+        Boost your library for free! Download our sample hot cue packs, harmonic key charts, transition tools, and scratch FX drops with zero paywall.
+      </p>
+    </div>
+  </section>
+
+  <!-- FREE DOWNLOADS GRID -->
+  <section class="section-padding" style="padding-top: 1rem;">
+    <div class="container">
+      
+      <!-- Rendered dynamically by app.js -->
+      <div class="features-grid" id="freeDownloadsGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- VIP VAULT PROMO -->
+  <section class="section-padding" style="background: var(--bg-surface);">
+    <div class="container" style="text-align: center; max-width: 800px;">
+      <span class="badge-gold"><i class="ri-vip-crown-line"></i> Want 2,500+ More Tracks?</span>
+      <h2 class="section-title">UPGRADE TO THE <span class="gold-gradient-text">MEGA BUNDLE 2026</span></h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">
+        Loved the free sampler? Get full lifetime access to our 2,500+ track archive with pre-mapped Rekordbox cue markers, wedding collections, and roadshow edits.
+      </p>
+      <a href="store.html" class="btn btn-gold">
+        <i class="ri-shopping-cart-line"></i> Unlock Ultimate Mega Bundle (₹1,999)
+      </a>
+    </div>
+  </section>
+
+  <!-- PERSISTENT AUDIO PLAYER BAR -->
+  <div class="audio-player-bar" id="audioPlayerBar">
+    <div class="audio-player-inner">
+      <div class="track-info">
+        <img src="https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?auto=format&fit=crop&w=200&q=80" id="playerTrackImage" class="track-thumb" alt="Track Artwork" referrerPolicy="no-referrer" />
+        <div class="track-details">
+          <h4 id="playerTrackTitle">Select a Track to Preview</h4>
+          <p>Mix With DJ Kevin Sampler</p>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <button class="play-btn" id="playerPlayBtn"><i class="ri-play-fill"></i></button>
+        <div class="progress-container">
+          <span class="time-display" id="playerCurrentTime">0:00</span>
+          <div class="progress-bar" id="playerProgress">
+            <div class="progress-fill" id="playerFill"></div>
+          </div>
+          <span class="time-display" id="playerDuration">0:00</span>
+        </div>
+      </div>
+
+      <button class="close-player" id="playerCloseBtn">&times;</button>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919082535931?text=Hi%20DJ%20Kevin,%20I'm%20enjoying%20the%20free%20downloads" target="_blank" class="floating-whatsapp" aria-label="Contact on WhatsApp">
+    <i class="ri-whatsapp-line"></i>
+  </a>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-logo-icon"><i class="ri-disc-line"></i></div>
+            <span class="gold-gradient-text">DJ KEVIN</span>
+          </a>
+          <p>The Ultimate DJ Resource. Download free DJ tools and pro playlist bundles.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/mixwithdjkevin" target="_blank" class="social-icon" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+            <a href="https://youtube.com/mixwithdjkevin" target="_blank" class="social-icon" aria-label="YouTube"><i class="ri-youtube-line"></i></a>
+            <a href="https://wa.me/919082535931" target="_blank" class="social-icon" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="store.html">DJ Playlist Shop</a>
+            <a href="academy.html">Musik N Beatz Academy</a>
+            <a href="downloads.html">Free Downloads</a>
+            <a href="about.html">About DJ Kevin</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <div class="footer-links">
+            <a href="downloads.html">Free Hot Cues</a>
+            <a href="downloads.html">BPM Key Chart</a>
+            <a href="downloads.html">Scratch FX Drops</a>
+          </div>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Free Tool Alerts</h4>
+          <p>Get notified when new free packs drop.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); DJApp.showToast('Subscribed to Free Pack Alerts!');">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-gold btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mix With DJ Kevin. All Rights Reserved. GitHub Pages Compatible.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>
