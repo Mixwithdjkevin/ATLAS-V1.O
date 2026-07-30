@@ -1,0 +1,17 @@
+# Explicitly mark all image formats as binary to prevent Git text-encoding conversions, CRLF normalization, or UTF-8 byte replacements on push
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.svg text eol=lf
+
+# Default text handling for code & web assets
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
