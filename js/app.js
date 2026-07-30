@@ -24,7 +24,6 @@ const DJApp = {
       badge: "🔥 BEST SELLER",
       image: "images/products/17gb-mega-bundle.png",
       buyLink: "https://superprofile.bio/vp/🔥-17gb-new-year-2026-dj-mega-bundle",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
       isBestSeller: true,
       isFeatured: true,
       isFree: false,
@@ -46,7 +45,6 @@ const DJApp = {
       badge: "⭐ PRO DJ PICK",
       image: "images/products/rekordbox-serato-bundle.png",
       buyLink: "https://superprofile.bio/vp/🔥-new-year-2026-–-17gb-rekordbox-dj-playlist-bundle-🔥",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
       isBestSeller: true,
       isFeatured: true,
       isFree: false,
@@ -68,7 +66,6 @@ const DJApp = {
       badge: "🎵 DJ ESSENTIAL",
       image: "images/products/dj-original-extended-pack.png",
       buyLink: "https://superprofile.bio/vp/dj-original-extended-mega-pack-–-10gb",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
       isBestSeller: false,
       isFeatured: true,
       isFree: false,
@@ -89,7 +86,6 @@ const DJApp = {
       badge: "🎉 EVENT READY",
       image: "images/products/11gb-roadshow-collection.png",
       buyLink: "https://superprofile.bio/vp/🎶-11gb-roadshow-mp3-collection-–-haldi--visarjan---more-🎶",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
       isBestSeller: false,
       isFeatured: true,
       isFree: false,
@@ -110,7 +106,6 @@ const DJApp = {
       badge: "💍 WEDDING ESSENTIAL",
       image: "images/products/bollywood-wedding-rekordbox.png",
       buyLink: "https://superprofile.bio/vp/🎧-bollywood-wedding-dance-hits-–-original---remix-pack--rekordbox---mp3-",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
       isBestSeller: true,
       isFeatured: true,
       isFree: false,
@@ -131,7 +126,6 @@ const DJApp = {
       badge: "🎵 MP3 COLLECTION",
       image: "images/products/bollywood-wedding-mp3.png",
       buyLink: "https://superprofile.bio/vp/🎧-bollywood-wedding-dance-hits-–-original---remix-pack--mp3-version-",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
       isBestSeller: false,
       isFeatured: true,
       isFree: false,
@@ -152,7 +146,6 @@ const DJApp = {
       badge: "🔥 MOST POPULAR",
       image: "images/products/bollywood-original-hot-cues.png",
       buyLink: "https://superprofile.bio/vp/bollywood-original-hot-cues--your-instant-party-starter--634",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
       isBestSeller: true,
       isFeatured: true,
       isFree: false,
@@ -173,7 +166,6 @@ const DJApp = {
       badge: "⚡ REMIX EDITION",
       image: "images/products/bollywood-remix-hot-cues.png",
       buyLink: "https://superprofile.bio/vp/bollywood-dance-remix-hot-cues--your-instant-party-starter-",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
       isBestSeller: false,
       isFeatured: true,
       isFree: false,
@@ -194,7 +186,6 @@ const DJApp = {
       badge: "🪔 FESTIVAL SPECIAL",
       image: "images/products/garba-15gb-pack.png",
       buyLink: "https://superprofile.bio/vp/15gb-navratri-garba-pack-",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
       isBestSeller: false,
       isFeatured: true,
       isFree: false,
@@ -215,7 +206,6 @@ const DJApp = {
       badge: "🎁 FREE DOWNLOAD",
       image: "images/products/free-rekordbox-demo.png",
       buyLink: "https://superprofile.bio/vp/bollywood-original-hot-cues--your-instant-party-starter--634",
-      audioSample: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
       isBestSeller: false,
       isFeatured: true,
       isFree: true,
@@ -305,10 +295,6 @@ const DJApp = {
     }
   ],
 
-  // Current Audio State
-  currentAudio: null,
-  currentTrackId: null,
-
   // Init Method
   init() {
     this.setupHeaderScroll();
@@ -317,7 +303,6 @@ const DJApp = {
     this.renderCourses();
     this.renderFreeDownloads();
     this.setupSearchAndFilter();
-    this.setupAudioPlayer();
     this.setupContactForms();
     console.log("Mix With DJ Kevin - App Engine Loaded successfully.");
   },
@@ -395,12 +380,16 @@ const DJApp = {
           <h3 class="product-title">${product.title}</h3>
           <p class="product-desc">${product.description}</p>
           
-          <div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem;">
-            <button class="btn btn-outline-gold btn-sm" style="flex: 1;" onclick="DJApp.playAudioSample('${product.id}', '${product.title.replace(/'/g, "\\'")}', '${product.audioSample}', '${product.image}')">
-              <i class="ri-play-fill"></i> Audio Preview
-            </button>
-            <button class="btn btn-outline-gold btn-sm" onclick="DJApp.openTracklistModal('${product.id}')">
-              <i class="ri-list-check-2"></i> Tracklist
+          <div class="product-features-list">
+            <div class="feature-item"><i class="ri-checkbox-circle-fill"></i> <span><strong>Instant Download</strong> & Lifetime Access</span></div>
+            <div class="feature-item"><i class="ri-checkbox-circle-fill"></i> <span><strong>High Quality 320kbps MP3</strong> Audio</span></div>
+            <div class="feature-item"><i class="ri-checkbox-circle-fill"></i> <span><strong>Organized Folders</strong> for Instant Mixing</span></div>
+            <div class="feature-item"><i class="ri-checkbox-circle-fill"></i> <span><strong>DJ Ready:</strong> Rekordbox, Serato, VirtualDJ & Traktor</span></div>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <button class="btn btn-outline-gold btn-sm btn-full" onclick="DJApp.openTracklistModal('${product.id}')">
+              <i class="ri-list-check-2"></i> Tracklist & Pack Details
             </button>
           </div>
 
@@ -409,14 +398,14 @@ const DJApp = {
               <span class="price-current">${product.price}</span>
             </div>
             <a href="${product.buyLink}" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
-              ${product.isFree ? 'Download <i class="ri-download-cloud-line"></i>' : 'Buy Now <i class="ri-arrow-right-line"></i>'}
+              ${product.isFree ? 'Free Download <i class="ri-download-cloud-line"></i>' : 'Buy Now <i class="ri-arrow-right-line"></i>'}
             </a>
           </div>
 
           <div class="card-guarantees">
-            <span><i class="ri-checkbox-circle-fill"></i> Instant Download</span>
-            <span><i class="ri-shield-check-fill"></i> Secure Payment</span>
-            <span><i class="ri-infinite-line"></i> Lifetime Access</span>
+            <span><i class="ri-shield-check-fill"></i> Verified Quality</span>
+            <span><i class="ri-lock-2-fill"></i> Secure Payment</span>
+            <span><i class="ri-customer-service-2-fill"></i> DJ Support</span>
           </div>
         </div>
       </div>
@@ -563,7 +552,7 @@ const DJApp = {
             <button class="modal-close" onclick="DJApp.closeModal('tracklistModal')">&times;</button>
           </div>
           <div class="modal-body">
-            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Sample tracklist preview included in this pack:</p>
+            <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Tracklist contents included in this pack:</p>
             <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
               <ul style="display: flex; flex-direction: column; gap: 0.8rem;">
                 ${product.tracklist ? product.tracklist.map((track, i) => `
@@ -595,95 +584,6 @@ const DJApp = {
     if (modal) {
       modal.remove();
     }
-  },
-
-  // Audio Sampler Engine
-  setupAudioPlayer() {
-    this.audioElement = new Audio();
-    
-    const playBtn = document.getElementById("playerPlayBtn");
-    const closeBtn = document.getElementById("playerCloseBtn");
-    const progressBar = document.getElementById("playerProgress");
-    const fillBar = document.getElementById("playerFill");
-    const currentTimeEl = document.getElementById("playerCurrentTime");
-    const durationTimeEl = document.getElementById("playerDuration");
-
-    if (!playBtn) return;
-
-    this.audioElement.addEventListener("timeupdate", () => {
-      if (this.audioElement.duration) {
-        const pct = (this.audioElement.currentTime / this.audioElement.duration) * 100;
-        if (fillBar) fillBar.style.width = `${pct}%`;
-        if (currentTimeEl) currentTimeEl.textContent = this.formatTime(this.audioElement.currentTime);
-        if (durationTimeEl) durationTimeEl.textContent = this.formatTime(this.audioElement.duration);
-      }
-    });
-
-    this.audioElement.addEventListener("ended", () => {
-      if (playBtn) playBtn.innerHTML = '<i class="ri-play-fill"></i>';
-    });
-
-    playBtn.addEventListener("click", () => {
-      if (this.audioElement.paused) {
-        this.audioElement.play();
-        playBtn.innerHTML = '<i class="ri-pause-fill"></i>';
-      } else {
-        this.audioElement.pause();
-        playBtn.innerHTML = '<i class="ri-play-fill"></i>';
-      }
-    });
-
-    if (closeBtn) {
-      closeBtn.addEventListener("click", () => {
-        this.audioElement.pause();
-        const playerBar = document.getElementById("audioPlayerBar");
-        if (playerBar) playerBar.classList.remove("active");
-      });
-    }
-
-    if (progressBar) {
-      progressBar.addEventListener("click", (e) => {
-        const rect = progressBar.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const width = rect.width;
-        const duration = this.audioElement.duration;
-        if (duration) {
-          this.audioElement.currentTime = (clickX / width) * duration;
-        }
-      });
-    }
-  },
-
-  playAudioSample(id, title, url, image) {
-    const playerBar = document.getElementById("audioPlayerBar");
-    const titleEl = document.getElementById("playerTrackTitle");
-    const imageEl = document.getElementById("playerTrackImage");
-    const playBtn = document.getElementById("playerPlayBtn");
-
-    if (!playerBar) return;
-
-    if (this.currentTrackId === id && !this.audioElement.paused) {
-      this.audioElement.pause();
-      if (playBtn) playBtn.innerHTML = '<i class="ri-play-fill"></i>';
-      return;
-    }
-
-    this.currentTrackId = id;
-    this.audioElement.src = url;
-    this.audioElement.play();
-
-    if (titleEl) titleEl.textContent = title;
-    if (imageEl) imageEl.src = image;
-    if (playBtn) playBtn.innerHTML = '<i class="ri-pause-fill"></i>';
-
-    playerBar.classList.add("active");
-    this.showToast(`Now Previewing: ${title}`);
-  },
-
-  formatTime(secs) {
-    const m = Math.floor(secs / 60);
-    const s = Math.floor(secs % 60);
-    return `${m}:${s < 10 ? '0' : ''}${s}`;
   },
 
   // Handle Free Downloads

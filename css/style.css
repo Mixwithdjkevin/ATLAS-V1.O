@@ -636,7 +636,38 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   line-height: 1.5;
   margin-bottom: 1.25rem;
+}
+
+/* Product Feature Highlights List */
+.product-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  font-size: 0.825rem;
+  color: var(--text-secondary);
   flex-grow: 1;
+}
+
+.product-features-list .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.35;
+}
+
+.product-features-list .feature-item i {
+  color: var(--gold-primary);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.product-features-list .feature-item strong {
+  color: var(--text-primary);
 }
 
 .product-footer {
