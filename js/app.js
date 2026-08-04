@@ -205,7 +205,7 @@ const DJApp = {
       price: "FREE",
       badge: "🎁 FREE DOWNLOAD",
       image: "images/products/free-rekordbox-demo.png",
-      buyLink: "https://superprofile.bio/vp/bollywood-original-hot-cues--your-instant-party-starter--634",
+      buyLink: "https://superprofile.bio/vp/free-demo-rekordbox-playlist-with-hot-cue",
       isBestSeller: false,
       isFeatured: true,
       isFree: true,
@@ -264,7 +264,7 @@ const DJApp = {
       size: "Instant Download",
       trackCount: "Demo Cue Pack",
       desc: "Download a free Rekordbox demo playlist and experience the quality before purchasing.",
-      fileUrl: "https://superprofile.bio/vp/bollywood-original-hot-cues--your-instant-party-starter--634"
+      fileUrl: "https://superprofile.bio/vp/free-demo-rekordbox-playlist-with-hot-cue"
     },
     {
       id: "dl-002",
@@ -567,7 +567,7 @@ const DJApp = {
               <div class="price-box">
                 <span class="price-current">${product.price}</span>
               </div>
-              <a href="${product.buyLink}" target="_blank" class="btn btn-gold">${product.isFree ? 'Free Download Now' : 'Buy Complete Pack Now'}</a>
+              <a href="${product.buyLink}" target="_blank" rel="noopener noreferrer" class="btn btn-gold">${product.isFree ? 'Free Download Now' : 'Buy Complete Pack Now'}</a>
             </div>
           </div>
         </div>
@@ -590,7 +590,7 @@ const DJApp = {
   handleDownload(title, fileUrl) {
     this.showToast(`Preparing download: ${title}...`);
     setTimeout(() => {
-      window.open(fileUrl, "_blank");
+      window.open(fileUrl, "_blank", "noopener,noreferrer");
     }, 1200);
   },
 
